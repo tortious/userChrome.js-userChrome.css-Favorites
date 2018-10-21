@@ -1,16 +1,20 @@
-/*Autohide Bookmark bar*/
-#PersonalToolbar{
-margin-top: 0px !important;
-transition: margin 0.1s linear !important;
-position: fixed !important;
-    opacity: 0;
-width: 100%;
-margin-left: 28px !important;
+/* Auto-hide toolbar - aka the navbar*//*
+:root:not([customizing]) #nav-bar
+{
+  overflow-y: hidden;
+  min-height:0 !important;
+  margin-top: -32px !important;
+  opacity: 0;
 }
-#navigator-toolbox:hover #PersonalToolbar{
-margin-top: 0px !important;
-    opacity: 1;
+:root:not([customizing]) :hover > #nav-bar,
+:root:not([customizing]) #nav-bar:focus-within {
+  max-height: 32px !important;;
+  opacity: 1;
+    margin-top: 0px !important;
+  transition: opacity 0s ease-in, max-height 0.1s linear;
 }
-#nav-bar{
-z-index: 1;
-}
+/* End of Auto-hide toolbar */
+
+
+
+
