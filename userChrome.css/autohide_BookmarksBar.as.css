@@ -1,0 +1,18 @@
+/*Autohide Bookmark bar*/
+#PersonalToolbar{
+margin-top: 0px !important;
+transition: margin 0.1s linear !important;
+position: fixed !important;
+    opacity: 0;
+width: 100%;
+margin-left: 28px !important;
+}
+#navigator-toolbox:hover #PersonalToolbar{
+margin-top: 0px !important;
+    opacity: 1;
+}
+#nav-bar{
+z-index: 1;
+}
+
+
