@@ -1,0 +1,301 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+@-moz-document  url-prefix(chrome://mozapps/content/extensions/extensions.xul),
+				url-prefix(about:addons) {
+
+							
+					
+					
+	.category {
+	  margin-inline-start: 0px !important;
+}
+
+	/* dimensions / positioning */
+	#addons-page .main-content{
+	  padding: 0 !important;
+	  margin: 0 !important;
+}
+
+					#search-label, .textbox-search-icon, .textbox-search-clear {display: none !important;}
+					
+					#header {
+						background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+					}				
+					#header-search {
+						padding-left: 120px !important;
+					}
+	#addons-page #header-search{
+		background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important; 
+		color: #2fd281 !important;
+	  min-height: 20px !important;
+		min-width: 550px !important;
+		border: 1px solid #0a88ff !important;
+}
+					.addon-control  {display: none !important;}
+					
+					
+					#header-utils-btn {display: none !important;}
+					
+					.name-container > .name {
+						padding-left: 24px !important;
+					}
+					
+					
+					
+					
+	#addons-page #header-search .textbox-input-box{
+	  height: 18px !important;
+}
+	
+	#addons-page #addon-list {
+	  -moz-margin-start: 0px !important;
+}
+
+	#addons-page:not(.inSidebar):not([aios-inSidebar="true"])  .view-pane > .list > scrollbox {
+	  padding-right: 0 !important;
+	  padding-left: 0 !important;
+}
+
+	#addons-page #detail-view,
+	#addons-page #userstyle-sorting,
+	#addons-page .global-warning-container,
+	#addons-page .global-info-container{
+	  -moz-margin-start: 0px !important;
+	  -moz-margin-end: 1px !important;
+}
+
+	#addons-page .detail-view-container {
+	  -moz-margin-start: 12px !important;
+}
+
+
+	#addons-page #header{
+	  padding: 4px 0 !important;
+	  margin: 0 !important;
+}
+
+	/* buttons / menulists */
+	#addons-page  #custombutons-add-new,
+	#addons-page #header button,
+	#addons-page #header #header-utils-btn,
+	#addons-page #list-view .global-info button,
+	#addons-page #list-view .discover-button,
+	#addons-page .status-control-wrapper button,
+	#addons-page #userstyle-sorting button,
+	#addons-page #update-actions button,
+	#addons-page #updates-list-empty button,
+	#addons-page .relnotes-toggle,
+	#list-view menulist,
+	#updates-list menulist{
+	  padding: 4px !important;
+	  min-height: 40px !important;
+	  height: unset !important;
+}
+	
+	#addons-page  #custombutons-add-new,
+	#addons-page #header button:not(.button-link),
+	#addons-page #header #header-utils-btn,
+	#addons-page #list-view .global-info button:not(.button-link),
+	#addons-page #list-view .discover-button,
+	#addons-page #list-view menulist,
+	#addons-page #updates-list menulist,
+	#addons-page .status-control-wrapper button,
+	#addons-page #userstyle-sorting .addon-control,
+	#addons-page #update-actions button,
+	#addons-page #updates-list-empty button,
+	#addons-page .relnotes-toggle:hover{
+	  background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+}
+
+	#addons-page #header-utils-btn{
+	  padding: 2px !important;
+	  height: unset !important;
+}
+
+	#addons-page button.sorter{
+	  padding:2px !important;
+	  min-height: 26px !important;
+	  height: unset !important;
+}
+
+	#addons-page #header-search{
+	  padding: 1px !important;
+	  height: unset !important;
+}
+	
+	/* add-on entry */
+	#addons-page .main-content .addon[active="false"]{
+	  opacity: 1 !important;
+}
+	
+	#addons-page .main-content #search-list .addon[status="installed"][active="false"]{
+	  opacity: 1 !important;
+}
+
+
+	/* detail view */
+	#detail-view button:not(.button-link):not(.text-link),
+	#detail-view menulist{
+	  padding: 2px !important;
+	  min-height: unset !important;
+	  height: unset !important;
+	  background-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.20),rgba(0,0,0,0.01)) !important;
+}
+	
+	#detail-view colorpicker[type="button"]{
+	  padding: 2px !important;
+	  min-height: 26px !important;
+	  min-width: 40px !important;
+	  height:auto !important;
+	  width: auto !important;
+}
+
+	#detail-view .box-inherit.scrollbox-innerbox {
+	  margin: 0px !important;
+}
+	
+	/* checkbox and radio items */
+	#addons-page checkbox image,
+	#addons-page radio image {
+	  width: 16px !important;
+	  height: 16px !important;
+	  margin: 0 !important;
+}
+	
+	/* remove navigation buttons */
+	#nav-header #back-btn,
+	#nav-header #forward-btn {
+	  visibility: hidden !important;
+}
+	
+}
+	
+.name-container {color: #2fd281 !important;}
+	/* colorize category icons */
+	#category-search .category-icon {
+	  fill: #8aa8cc !important;
+	}
+
+	#category-discover .category-icon {
+	  fill: #87cefa !important;
+}
+
+	#category-extension .category-icon {
+	  fill: #0a88ff !important;
+}
+
+	#category-theme .category-icon {
+	  fill: #00ffee !important;
+}
+
+	#category-plugin .category-icon {
+	  fill: #00aa55 !important;
+}
+
+	#category-dictionary .category-icon {
+	  fill: purple !important;
+}
+
+	#category-legacy .category-icon {
+	  fill: red !important;
+}
+
+	#category-availableUpdates .category-icon {
+	  fill: orange !important;
+}
+
+	#category-recentUpdates .category-icon {
+	  fill: #b99c16 !important;
+}
+
+	.category:not([selected="true"]):hover .category-icon {
+	  filter: brightness(2.00) !important;
+}
+	
+	#category-discover:not([selected="true"]):hover .category-icon,
+	#category-theme:not([selected="true"]):hover .category-icon{
+	  filter: brightness(1.5) !important;
+}
+	
+	#category-plugin:not([selected="true"]):hover .category-icon{
+	  filter: brightness(2.25) !important;
+}
+	
+	/* Firefox 64 changes */
+	.addon {
+	  padding-top: 7px !important;
+	  padding-bottom: 7px !important;
+}
+	
+	#list-view-heading {
+	  margin-top: unset !important;
+	  margin-bottom: unset !important;
+	  margin-inline-start: unset !important;
+	  min-width: 100% !important;
+}
+
+	#list-view-heading .header-name {
+	  font-size: inherit !important;
+	  font-weight: unset !important;
+}
+
+
+	#header-inner {
+	  width: unset !important;
+	  margin: 2px 0 !important;
+}
+
+	#list-view-heading {
+	  margin-top: -24px !important;
+}
+
+	#list-view-heading-name {
+	  visibility: hidden !important;
+}
+
+	.addon.card {
+	  max-width: unset !important;
+	  padding-inline-end: 0px !important;
+}
+
+	.list-view-heading-inner {
+	  -moz-box-flex: 1 !important;
+	  width: unset !important;
+}
+
+	.list > .addon {
+	  margin: unset !important;
+}
+
+	.list > .addon,
+	.list > .addon:hover {
+	  outset: unset !important;
+	  box-shadow: unset !important;
+	  duration: unset !important;
+	  border-bottom: 2px solid #0a88ff !important;
+}
+
+	#detail-view .card {
+	  outset: unset !important;
+	  box-shadow: unset !important;
+	  duration: unset !important;
+	}
+*/
+	#detail-view .detail-view-container {
+	  width: calc(100vw - 300px) !important;
+}
+	#detail-view .detail-view-wrapper > spacer {
+	  display: none !important;
+}
+
+
+}
+
+/* get add-ons discovery page */
+html[data-reactid][data-reactroot] head[data-reactid] + body[data-reactid]{
+  background: white !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
