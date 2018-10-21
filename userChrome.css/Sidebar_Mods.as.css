@@ -1,0 +1,94 @@
+/********************   Sidebar Theming & Trimming of the Fat   **************************************/
+
+
+/******************************************************************************/
+/****************    Sidebar Mods   ****************/
+
+
+
+#sidebar-splitter, #viewButton, #sidebar-close-button, #sidebar-header {display: none !important}
+
+#sidebar-search-container textbox#search-box {
+    background: linear-gradient(-89deg, #020202 0%,#1a1a1a 30%,#2fd281 46%,#010101 50%,#2fd281 53%,#1a1a1a 70%,#020202 100%) !important;    
+}
+
+#sidebar,
+#bookmarksPanel,
+#bookmarks-view, 
+#history-panel,
+#historyTree {
+background:linear-gradient(290deg, #020202 0%,#1a1a1a 30%,#2fd281 46%,#010101 50%,#2fd281 53%,#1a1a1a 70%,#020202 100%) !important;    
+  color: #D1D1D1 !important;
+  -moz-appearance: none !important;
+}
+
+/***************    this removes the hover color and keeps it the same when selected    ****************/
+.sidebar-placesTreechildren::-moz-tree-row(selected),
+.sidebar-placesTreechildren::-moz-tree-row(hover),
+.sidebar-placesTreechildren::-moz-tree-cell(hover),
+.sidebar-placesTreechildren::-moz-tree-row(selected),
+.sidebar-placesTreechildren::-moz-tree-cell-text(hover),
+.sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
+    background: var(--in-content-box-background) !important;
+    border: none !important;
+    color: #2fd281 !important;}
+
+
+
+.sidebar-placesTree treechildren::-moz-tree-cell-text {
+  color: #0a88ff !important;
+}
+
+
+
+#bookmarks-view, #history-panel, #historyTree {
+   padding: 0px !important;
+   font-size: 12px !important;
+   margin-top: 0px !important;
+   margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: -10px !important;}
+ #bookmarks-view treechildren::-moz-tree-row, #history-panel, #historyTree {
+   min-height: 16px !important;
+   margin-top: 1px !important;
+   margin-bottom: 1px !important;}
+
+
+.textbox-search-sign {display: none !important;}
+
+/********   coloring the searchbox in the sidebar   ************/
+.sidebar-search-container.tabs-container.sync-state.selected .search-box,
+hbox#sidebar-search-container textbox#search-box {
+  -moz-appearance: none!important;
+  background:linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+  color: #2fd281!important;
+  min-height: 22px!important;
+  padding: 0 0 0 4px!important;
+  border: none !important; /*
+  border-color: var(--in-content-box-border-color)!important;
+  border-radius: 3px!important*/
+}
+.searchbar-textbox {
+    margin-left: -1px !important;
+    margin-top: 0px !important;
+    height: 30px !important;
+background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+}
+
+.searchbar-search-icon {display: none}
+
+
+/* Don't show common values to save space *//*
+#statuspanel-label[value^="http"]{margin-left:-38px !important;}
+#statuspanel-label[value^="https"]{margin-left:-43px !important;}
+#statuspanel-label[value^="www"]{margin-left:-32px !important;}
+#statuspanel-label[value^="http://www"]{margin-left:-66px !important;}
+#statuspanel-label[value^="https://www"]{margin-left:-71px !important;}
+*/
+
+
+
+
+
+/*linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+*/
