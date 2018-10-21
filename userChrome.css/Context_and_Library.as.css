@@ -1,0 +1,214 @@
+/***************    Mods re Context Menu & Removal of other stuff & coloring of library menu        ************************/
+
+
+/**********************     Tortious' Windows 10 Menu Color Scheme    **********************/
+
+menupopup {
+    -moz-appearance: none !important;
+    padding: 8px 2px 8px 2px !important;
+    background: linear-gradient(75deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+    border: 1px #000000 solid !important;
+    min-width: 280px !important;
+}
+menuseparator {
+    -moz-appearance: none !important;
+    border: none !important;
+    padding: .5px 0px .5px 0px !important;
+    margin: 4px 8px 4px 8px !important;
+    background:#000000
+}
+menuitem, menu {
+    -moz-appearance: none !important;
+    color: #b103b1 !important;
+    padding: 7.5px 0px 7.5px 0px !important;
+}
+menuitem[disabled="true"], menuitem[disabled="true"] > .menu-text {
+    color: #747272 !important;
+}
+menuitem:hover, menu:hover, menu[open="true"], menuitem[_moz-menuactive="true"] {
+    -moz-appearance: none !important;
+    padding: 7.5px 0px 7.5px 0px !important;
+    background:var(--in-content-box-background) !important;
+    color: #005346 !important;
+}
+
+menuitem:hover > .menu-text, menuitem:hover > .menu-iconic-text {
+    color: #0a84ff !important;
+}
+
+menugroup {
+    padding: 0px !important;
+    background: transparent !important;
+}
+menuitem > .menu-text, menuitem > .menu-iconic-text {
+    color: #2fd281 !important;
+}
+menuitem[type="checkbox"] {
+    padding-left: 8px !important;
+    padding-top: 6.5px !important;
+    padding-bottom: 6.5px !important;
+}
+menuitem[type="radio"] {
+    padding-left: 8px !important;
+    padding-top: 6.5px !important;
+    padding-bottom: 6.5px !important;
+}
+menuitem[type="checkbox"] > .menu-iconic-text, menuitem[type="radio"] > .menu-iconic-text {
+    padding-left: 5px !important;
+}
+menuitem[checked="true"][type="checkbox"] > .menu-iconic-left {
+    padding: 7px 0px 0px 0px !important;
+    border: solid #000000;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg) scale(.75);
+    margin-bottom: 4px !important;
+}
+menuitem[checked="true"][type="radio"] > .menu-iconic-left {
+    padding: 1px !important;
+    border: solid #000000;
+    height: 17px !important;
+    border-radius: 100%;
+    background:linear-gradient(75deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+    transform: scale(.5);
+}
+menucaption {
+    background: transparent !important;
+    color: #2fd281 !important;
+}
+#ContentSelectDropdown > menupopup {
+    background-image: none !important;
+}
+#ContentSelectDropdown {
+    padding: 0px !important;
+}
+menulist {
+    -moz-appearance: none !important;
+    padding: 4px 4px 4px 4px !important;
+    border: 2px solid #000000 !important;
+    background: transparent !important;
+}
+menulist:hover {
+    border: 2px solid #000000 !important;
+    background: transparent !important;
+}
+menulist[open="true"]  {
+    border: 2px solid #000000 !important;
+    background:linear-gradient(75deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+}
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+    padding: 0px !important;
+}
+.menu-iconic-left {
+    -moz-appearance: none !important;
+    padding: 0px 5px 0px 9px !important;
+}
+.menu-right {
+    -moz-appearance: none !important;
+    padding: 7.5px !important;
+    margin-right: 6px !important;
+    color: #2fd281 !important;
+    border: solid #000000;
+    border-width: 0 2px 2px 0px;
+    transform: rotate(-45deg) scale(.55);
+}
+tooltip {
+    -moz-appearance: none !important;
+    color: #2fd281 !important;
+    background:linear-gradient(75deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+    border: 1px solid #000000 !important;
+    padding: 6.5px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************************************************/
+/****************************************************************************************************************************************/
+/****************************************************************************************************************************************/
+/****************************************************************************************************************************************/
+
+
+
+/*******************************************/
+/*************  Removal of Shit ************/
+/****************************Misc Removal of Shit   */
+/* remove other stuff */
+
+#appMenu-popup vbox {
+    margin-left: -4px !important;
+    margin-top: 4px !important;
+}
+
+#appMenu-popup label {color: #2fd281}
+#appMenu-popup vbox {color: #0a84ff !important;}
+#appMenu-popup toolbarseparator {display: none}
+
+#appMenu-mainView {
+    background: linear-gradient(65deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+}
+#PanelUI-developer {
+    background: linear-gradient(65deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;}
+#PanelUI-developer #PanelUI-developerItems menuseparator {background: #0a84ff;}
+#PanelUI-developer .panel-header {display: none !important;}
+#PanelUI-helpItems, .panel-header {background: linear-gradient(65deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;}
+#PanelUI-helpView .panel-header {display: none !important;}
+#appMenu-libraryView {background: linear-gradient(65deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;}
+#appMenu-libraryView .panel-header {display: none !important;}
+#appMenu-library-pocket-button {display: none !important;}
+#PanelUI-bookmarks.PanelUI-subView vbox.panel-subview-body, #PanelUI-history.PanelUI-subView vbox.panel-subview-body, #PanelUI-downloads.PanelUI-subView vbox.panel-subview-body 
+{
+    background: linear-gradient(65deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+}
+
+
+
+
+#appMenu-fxa-container,
+#appMenu-zoom-controls,
+#appMenu-fxa-label,
+#appMenu-edit-controls,
+#appMenu-print-button,
+#appMenu-more-button,
+#appMenu-new-window-button,
+#appMenu-private-window-button,
+#appMenuRestoreLastSession,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button {
+    display: none;
+}
+
+/* remove stuff from the context/right-click menu*/
+
+#context-navigation,
+#context-viewinfo,
+#context-viewsource,
+#context-sendpagetodevice,
+#context-pocket,
+#context-savepage,
+#context-sep-navigation,
+#context-sep-sendpagetodevice,
+#context-sep-viewbgimage,
+#context-sep-viewsource,
+#inspect-separator {
+    display: none !important
+}
