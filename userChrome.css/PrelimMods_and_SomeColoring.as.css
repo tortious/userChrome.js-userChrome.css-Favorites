@@ -1,0 +1,65 @@
+/*********  Preliminary Mods    *************/
+#titlebar-min, #titlebar-max, #titlebar-close, #back-button, #forward-button, .titlebar-placeholder{
+    display: none !important;}
+#navigator-toolbox { padding-top: 0px !important;}
+/* this hides top of navbar - not needed, but just matter of preference */
+#navigator-toolbox {margin-top: -1px !important}
+/*remove the hover color/effort when mouse is hovering on navbar buttons*/
+.toolbarbutton-1 {
+    --toolbarbutton-hover-background: none !important;
+    --toolbarbutton-active-background: none !important;
+}
+/* remove gap/line between bottom of tabs and url bar */
+#nav-bar { box-shadow: none !important;}
+/* Remove border above navbar */
+#navigator-toolbox::after {border-bottom: 0px !important;}
+
+#alltabs-button {display: none;}
+#tabbrowser-tabs[overflow] .scrollbutton-down {display: none}
+#tabbrowser-tabs[overflow] .scrollbutton-up {
+    visibility: hidden;
+}
+
+
+
+
+                                                                                    /*********************  grouping priorities ****************/
+/*****			Grouping Priorities of various toolbars				************/
+#TabsToolbar { -moz-box-ordinal-group: 0 !important;
+height: 33px !important;}  
+
+#nav-bar {	-moz-box-ordinal-group: 1 !important;
+height: 33px !important;}
+
+#nav-bar {display: none}
+
+#PersonalToolbar {-moz-box-ordinal-group: 3 !important;}
+
+                                                                                    /****************** coloring    *************************/
+#TabsToolbar {background:linear-gradient(1.2deg, #020202 0%,#1a1a1a 30%,#010101 46%,#008aff 50%,#010101 53%,#1a1a1a 70%,#020202 100%) !important;}
+/*    background:linear-gradient(0deg, #020202 0%,#1a1a1a 30%,#2fd281 46%,#010101 50%,#2fd281 53%,#1a1a1a 70%,#020202 100%) !important;    */
+#nav-bar-customization-target {  background: repeating-linear-gradient(-.3deg, #252525 0%,#1c1e23 5%,#1a1a1a 13%, #090909 19%, #2fd281 23%, #1b1b1b 28%, #2a2a2a 63%, #87cefa 65%, #333333 68%, #000000 80%, #232323 88%, #060606 100%) !important;
+}
+ /* background:linear-gradient(0deg, #020202 0%,#1a1a1a 30%,#2fd281 46%,#010101 50%,#2fd281 53%,#1a1a1a 70%,#020202 100%) !important;*/
+/*  Remove Highlight of Toolbar Buttons/Addons  */
+.toolbarbutton-1:hover { background: none}
+
+
+#addonbar_v {
+    left: 0px !important;
+    height: 100% !important;
+}
+
+#addonbar_v {
+ background: linear-gradient(-90deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#2fd281 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+  -moz-box-ordinal-group: 5 !important;  
+}
+
+#addonbar_v {
+    direction: ltr !important;
+    -moz-appearance: toolbar !important;
+}
+#addonbar_v toolbarbutton {
+      --toolbarbutton-inner-padding: 10px !important;
+      margin: 0 0px !important;
+  }
