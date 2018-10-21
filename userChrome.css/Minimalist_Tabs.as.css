@@ -1,0 +1,66 @@
+/*************************************************************/
+/*****  ******      Tab Mods            *******     **********/
+#TabsToolbar .close-icon {display: none !important;}
+
+.tab-line {display: none !important;}
+.tab-close-button, .tab-loading-burst, .tab-label {display: none !important;}
+.tabbrowser-tab::after, .tabbrowser-tab::before {display: none !important;}
+.tab-label-container {display: none !important;}
+.tabbrowser-tab[fadein] {
+    max-width: 36px !important;
+    min-width: 36px !important;
+}
+.tab-icon-image {margin-inline-end: 0px !important;
+margin-top: 9.5px !important;
+transform: scale(1.1)}
+.tab-content {padding: -9px !important;}
+
+.tab-icon-image {filter: grayscale(100%) !important;}
+.tabbrowser-tab[selected] .tab-icon-image {filter: none !important;}
+.tabbrowser-tab [selected] {background: none !important;}
+/*DISABLE WHITE FLASH OF DEATH*/
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content]>html {
+    background: var(--in-content-page-background) !important
+}
+
+
+
+
+
+
+/********************************************************************/
+/*******************        Menu Mods       ***********************/
+*  #PanelUI-menu-button {list-style-image: url("Windows.png") !important;
+    /*transform: scale (1.2,1.2) !important;*/
+}
+
+/*  making hamburger menu icon larger - attempt to apply this to the rest of the toolbar icons    */
+#PanelUI-menu-button > .toolbarbutton-badge-stack {
+    padding: 2px !important;
+}
+
+#PanelUI-menu-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+    width: 28px !important;
+    height: 32px !important;
+}
+
+
+/* show favicon for tabs without favicons */
+.tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+    display: inline !important;
+}
+
+#main-window .tabbrowser-tab[pinned] .tab-icon-image:not([src]),
+#main-window .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+    list-style-image: url('iron_cross_vector_by_fvsj-d65tchw') !important;
+}
+
+.tabbrowser-tab:not([pinned])[busy] .tab-icon-image {
+    display: none !important;
+}
+
+
