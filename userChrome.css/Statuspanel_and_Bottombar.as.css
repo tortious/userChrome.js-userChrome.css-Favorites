@@ -1,0 +1,124 @@
+
+
+
+
+/****************       Bottombar & statuspanel Mods        *********************/
+
+#bottom-toolbar, #bottom-toolbar-vbox {       
+    background: linear-gradient(-1deg, #010101 0%,#1b1b1b 30%,#0d0d0d 46%,#2fd281 50%,#0a0a0a 53%,#1b1b1b 70%,#010101 100%) !important;
+  -moz-box-ordinal-group: 10 !important;
+  }
+  
+  /**********	This is a random tweak - remove if thing get weird 	*****************/
+  #bottom-toolbar toolbarbutton {
+      -moz-appearance: toolbarbutton !important;
+    --toolbarbutton-inner-padding: 0px !important;
+  }
+  #bottom-toolbar {
+      -moz-appearance: toolbar !important;
+      direction: rtl !important;
+  }
+  
+  #bottom-toolbar toolbarbutton {
+      --toolbarbutton-inner-padding: 6px !important;
+      margin: 0 4px !important;
+  }
+  
+  #bottom-toolbar, #bottom-toolbar-vbox {
+      height: 32px !important;
+  }
+  
+  
+  
+  
+  /*************************************************************************************************************************************************************/
+                                                                                                          /* the above TabsToolbar and tabbrowser-tab setting also go into changing the bottom tab and tabbar size */
+  
+  
+  
+  
+  
+  
+  /* statuspanel label*/
+  #statuspanel-label {
+      color: #0a84ff !important;
+      background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+      border: none !important;
+      font-family: consolas !important;
+      font-size: 12px !important;
+      font-weight: bold !important;
+  }
+  
+  
+  
+  /******************	statuspanel stuff	********************/
+  #statuspanel {
+      position: fixed !important;
+      background: transparent !important;
+      color: #0a84ff !important;
+      border: none !important;
+      bottom: -6px !important;
+      left: 0px !important;
+      max-width: 60% !important;
+      margin-bottom: 6px !important;
+      padding-right: 5px !important;
+      padding-top: 0px !important;
+     /* padding-bottom: 25px !important;
+      /* Change the value to suite your needs */
+      transition: none !important;
+  }
+  
+  *|*.textbox-input::-moz-placeholder {opacity: 0}
+  
+  
+  #statuspanel {
+      opacity: 1 !important;
+  }
+  
+  #main-window:not([sizemode="fullscreen"]) #statuspanel[inactive] #statuspanel-inner::before {
+      background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+      color: #2fd281 !important;
+      font-family: lucida handwriting  !important;
+      font-size: 16px !important;
+      font-weight: bold  !important;
+      height: 38px !important;
+      bottom: -5px !important;
+      left: 0px !important;
+      margin-bottom: -11px !important;
+      padding-bottom: 0px !important;
+      padding-top: 10px !important;
+      padding-left: 100px !important;
+      padding-right: 100px !important;
+      position: fixed !important;
+      content: "~ Tortious ~" !important;
+  }
+  
+  #statuspanel[inactive] #statuspanel-label {
+      display: none !important;
+  }
+  
+  #statuspanel #statuspanel-inner {
+      background:transparent !important;
+      border: none !important;
+      height: 32px !important;
+      margin: 0px !important;
+  }
+  
+  
+  #statuspanel #statuspanel-label {
+      background: linear-gradient(to bottom, #000000 0%,#1c1e23 50%,#000000 100%) !important;
+      border: none !important;
+      color: #0a84ff !important;
+      height: 44px !important;
+      padding-top: 10px !important;
+      margin-bottom: -7px !important;
+  }
+  
+
+
+
+
+
+
+
+
