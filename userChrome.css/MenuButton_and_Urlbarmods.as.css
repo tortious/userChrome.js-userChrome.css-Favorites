@@ -1,0 +1,94 @@
+
+/********************************************************************/
+/*******************        Menu Mods       ***********************/
+*  #PanelUI-menu-button {list-style-image: url("Windows.png") !important;
+    /*transform: scale (1.2,1.2) !important;*/
+}
+
+/*  making hamburger menu icon larger - attempt to apply this to the rest of the toolbar icons    */
+#PanelUI-menu-button > .toolbarbutton-badge-stack {
+    padding: 2px !important;
+}
+
+#PanelUI-menu-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+    width: 28px !important;
+    height: 32px !important;
+}
+
+
+/* show favicon for tabs without favicons */
+.tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+    display: inline !important;
+}
+
+#main-window .tabbrowser-tab[pinned] .tab-icon-image:not([src]),
+#main-window .tabbrowser-tab:not([pinned]) .tab-icon-image:not([src]) {
+    list-style-image: url('iron_cross_vector_by_fvsj-d65tchw') !important;
+}
+
+.tabbrowser-tab:not([pinned])[busy] .tab-icon-image {
+    display: none !important;
+}
+
+
+
+/*************************************************************************/
+/*****************      Urlbar Mods     **********************************/ 
+#urlbar-container, #urlbar {
+    max-width: 650px !important;
+    min-width: 650px !important;
+}
+#urlbar  {
+    background: linear-gradient(39deg, #121212 0%,#1a1a1a 30%,#000000 46%,#000000 50%,#000000 53%,#1b1b1b 70%,#020202 100%) !important;    
+    border-right: 2px solid #0a88ff !important;
+    text-align: left !important;
+    font-family: consolas !important;
+    font-size: 12px !important;
+    font-weight: bolder !important;
+    color: #00eeff !important;  
+}
+
+#urlbar {padding-top: 0px !important;}
+.urlbar-history-dropmarker {display: none}
+#reader-mode-button {display: none}
+#pageActionSeparator {display: none}
+
+#star-button {opacity: 0 !important;}
+
+/* hides lock inside url */
+#urlbar[pageproxystate="valid"]>#identity-box.verifiedDomain>#connection-icon,
+#urlbar[pageproxystate="valid"]>#identity-box.verifiedIdentity>#connection-icon,
+#urlbar[pageproxystate="valid"]>#identity-box.mixedActiveBlocked>#connection-icon {
+    display: none !important;
+}
+/*disable url stuff */
+#pageActionButton,
+#pocket-button-box,
+ar-button,
+.autocomplete-history-dropmarker,
+#identity-icon-labels {
+    display: none !important;
+}
+#identity-box {
+    display: none !important;
+}
+
+#identity-box {display: none !important;}
+#PopupAutoCompleteRichResult {display: none !important;}
+
+/* box-shadow: none !important; */
+#urlbar-container {
+    margin-top: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
