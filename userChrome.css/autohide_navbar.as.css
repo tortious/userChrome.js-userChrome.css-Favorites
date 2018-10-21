@@ -1,0 +1,23 @@
+/*
+:root:not([customizing]) #TabsToolbar {
+    margin-bottom: -1px !important;
+    margin-top: -30px !important;
+    margin-left: 25vw !important;
+    margin-right: -1px !important;
+  max-height: 45px !important;
+}
+:root:not([customizing]) #nav-bar {      
+  margin-bottom: -1px !important;               
+  margin-top: -30px !important;
+  margin-left: -3px !important;
+  margin-right: 75vw !important; 
+  border-top: none !important;
+} 
+
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar {
+  margin-right: 40vw !important;
+}
+:root:not([customizing]) #navigator-toolbox:focus-within #TabsToolbar {
+  margin-left: 60vw !important;
+}
+*/
