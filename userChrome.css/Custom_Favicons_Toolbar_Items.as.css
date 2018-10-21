@@ -1,0 +1,120 @@
+
+/*#####################################################################################################################################################
+#####################################################	Custom favicons for 	#######################################################
+#########################################################################################################################################################
+#########################################################################################################################################################
+*//* THIS METHOD WORKS - to swap out addon favicons for custom images located in the chrome folder - woohoo */			
+
+/*	ONETAB	*/  
+toolbarbutton#extension_one-tab_com-browser-action {list-style-image: url("rand9.png") !important;}
+#extension_one-tab_com-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.5) !important;}
+#extension_one-tab_com-browser-action{transform: scale(1.5) !important;}    
+
+/*	BITWARDEN	*/   
+toolbarbutton#_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action {list-style-image: url("rand10.png") !important;}
+#_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+#_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action {transform: scale(1.3) !important;}
+
+/*	UBLOCK ORIGIN	*/		
+toolbarbutton#ublock0_raymondhill_net-browser-action {list-style-image: url("rand35.png") !important;}
+#ublock0_raymondhill_net-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.2) !important;}
+#ublock0_raymondhill_net-browser-action {transform: scale(1.5) !important;}
+
+/*	DECENTRALEYES	*/				
+toolbarbutton#jid1-bofifl9vbdl2zq_jetpack-browser-action  {list-style-image: url("rand1.png") !important;}
+#jid1-bofifl9vbdl2zq_jetpack-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.2,1.2) !important;}
+#jid1-bofifl9vbdl2zq_jetpack-browser-action {transform: scale(1.2,1.2) !important;}
+
+/*	COOKIE AUTO DELETE	*/				
+toolbarbutton#cookieautodelete_kennydo_com-browser-action  {list-style-image: url("rand29.png") !important;}
+#cookieautodelete_kennydo_com-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+#cookieautodelete_kennydo_com-browser-action {transform: scale(1.3) !important;}
+
+/*	PRIVACY POSSOM	*/   
+toolbarbutton#woop-noopscoopsnsxq_jetpack-browser-action  {list-style-image: url("a10.png") !important;}
+#woop-noopscoopsnsxq_jetpack-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+#woop-noopscoopsnsxq_jetpack-browser-action {transform: scale(1.3) !important;}
+
+/*	DARK MODE */     
+toolbarbutton#_174b2d58-b983-4501-ab4b-07e71203cb43_-browser-action  {list-style-image: url("rand25.png") !important;}
+#_174b2d58-b983-4501-ab4b-07e71203cb43_-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+#_174b2d58-b983-4501-ab4b-07e71203cb43_-browser-action {transform: scale(1.3) !important;}
+
+/*	RESTART BUTTON */     
+toolbarbutton#restart-button  {list-style-image: url("rand15.png") !important;}
+#restart-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.5) !important;}
+#restart-button {transform: scale(1.5) !important;}
+
+/*	AUTOPLAY BUTTON */
+toolbarbutton#autoplay-toggle-button  {list-style-image: url("a14.png") !important;}
+
+/*	browser-toolbox-button */
+toolbarbutton#browser-toolbox-button  {list-style-image: url("rand6.png") !important;}
+#browser-toolbox-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.5) !important;}
+#browser-toolbox-button {transform: scale(1.5) !important;}
+
+/*	NOTE TAKER	*/
+toolbarbutton#note-taker_r01-browser-action  {list-style-image: url("rand26.png") !important;}
+#note-taker_r01-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+#note-taker_r01-browser-action {transform: scale(1.3) !important;}
+
+
+/*	ABOUTCONFIG-TOOLBARBUTTON	*/
+toolbarbutton#aboutconfig-ToolBarButton  {list-style-image: url("rand28.png") !important;}
+
+/*	OPEN  CHROME FOLDER	*/
+toolbarbutton#open-chromefolder  {list-style-image: url("Round Skull.png") !important;}
+#open-chromefolder > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.5) !important;}
+#open-chromefolder {transform: scale(1.5) !important;}
+
+/*	PREFERENCES BUTTON	*/
+toolbarbutton#Einstellungen-button  {list-style-image: url("Win32.png") !important;}
+#Einstellungen-button > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.5) !important;}
+#Einstellungen-button {transform: scale(1.5) !important;}
+
+/*  CLEAR BROWSING DATA */
+toolbarbutton#_ce9f4b1f-24b8-4e9a-9051-b9e472b1b2f2_-browser-action {list-style-image: url("123.png") !important}
+
+/*  PUBLIC IP DISPLAY   */  
+toolbarbutton#jid0-jjrrrbmgoshuhb07ivnxtbal29w_jetpack-browser-action {list-style-image: url("rand14.png") !important}
+#jid0-jjrrrbmgoshuhb07ivnxtbal29w_jetpack-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.2,1.2) !important;}
+#jid0-jjrrrbmgoshuhb07ivnxtbal29w_jetpack-browser-action {transform: scale(1.2,1.2) !important;}
+
+/*  TAB LIST BOARD  */
+toolbarbutton#tablistboard_azisava_sakura_ne_jp-browser-action {list-style-image: url("rand27.png") !important}
+toolbarbutton#tablistboard_azisava_sakura_ne_jp-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.4) !important;}
+toolbarbutton#tablistboard_azisava_sakura_ne_jp-browser-action {transform: scale(1.4) !important;}
+
+
+/*  PAGE CACHE ARCHIVER */
+toolbarbutton#archiver_menu_com-browser-action {list-style-image: url("a37.png") !important}
+
+/*  CLOUD HOLE  */
+toolbarbutton#_cloudhole-browser-action {list-style-image: url("Boo1.png") !important}
+toolbarbutton#_cloudhole-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+toolbarbutton#_cloudhole-browser-action {transform: scale(1.5) !important;}
+
+/*  New Tab Override  */
+toolbarbutton#newtaboverride_agenedia_com-browser-action {list-style-image: url("rand23.png") !important}
+toolbarbutton#newtaboverride_agenedia_com-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+toolbarbutton#newtaboverride_agenedia_com-browser-action {transform: scale(1.5) !important;}
+/*  External Software Button    */
+toolbarbutton#_65b77238-bb05-470a-a445-ec0efe1d66c4_-browser-action {list-style-image: url("rand31.png") !important}
+toolbarbutton#_65b77238-bb05-470a-a445-ec0efe1d66c4_-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+toolbarbutton#_65b77238-bb05-470a-a445-ec0efe1d66c4_-browser-action {transform: scale(1.3) !important;}
+/* Forget Me Not */
+toolbarbutton#forget-me-not_lusito_info-browser-action {list-style-image: url("rand55.png") !important}
+
+/*   Saladict Translator   */
+toolbarbutton#saladict_crimx_com-browser-action {list-style-image: url("rand20.png") !important}
+
+/*   Instagram Addon   */
+toolbarbutton#_66e74f19-30e5-48fa-84d9-5bc98c97a304_-browser-action {list-style-image: url("rand24.png") !important}
+
+/*  Better OneTab Extension */
+toolbarbutton#_f68ff8a5-b145-412b-bc29-b9374c427f82_-browser-action {list-style-image: url("32px.png") !important}
+toolbarbutton#_f68ff8a5-b145-412b-bc29-b9374c427f82_-browser-action > .toolbarbutton-badge-stack > .toolbarbutton-icon {transform: scale(1.3) !important;}
+toolbarbutton#_f68ff8a5-b145-412b-bc29-b9374c427f82_-browser-action {transform: scale(1.4) !important;}
+
+
+
