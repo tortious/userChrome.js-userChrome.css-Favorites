@@ -1,0 +1,387 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* #################
+WINDOWS UWP DRAG BAR
+################# */
+toolbarbutton#alltabs-button {
+	-moz-binding: url("userChrome.xml#js");
+}
+
+
+/* #################
+- - - FONTS
+################# */
+#urlbar, #TabsToolbar .tabbrowser-tab, menu, .autocomplete-richlistbox, #menubar-items, statuspanel[type="overLink"] .statuspanel-label, toolbarbutton, #placeContent, #placesList, .editBMPanel_rowLabel, .textbox-input-box, .viewer-title.label.toolbar, .downloadTarget, .downloadDetails, #bookmarks-view-children, #sidebar-search-label, #sidebar-title, .menubar-text {
+  font-family: "Open Sans Semibold", "Segoe UI" !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+#clientBox {
+  font-family: "Open Sans Semibold", "Segoe UI" !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}   
+
+
+
+/* #################
+- - - COLORS 
+################# */
+
+/* DARK THEME */
+:root:-moz-lwtheme-darktext {                                      /* minor color changes to the default dark theme */
+  /*-color-overflow: rgb(31, 31, 31);                                          /* >> button color */
+  --chrome-background-color: rgb(255, 255, 255) !important;                      /* tab strip background & inactive tabs */
+  --chrome-secondary-background-color: rgb(235, 235, 235) !important;            /* nav bar & active tab */
+  --chrome-color: rgb(87, 87, 87) !important;                                 /* url & tab text, close tab & new tab buttons */
+  --background-color: rgb(221, 17, 17) !important;                               /* top border of out of focus window */
+}
+
+:root {
+  --tabs-border: transparent !important;                             /* active tab left & right borders - not working in 58?*/
+  --toolbox-border-bottom-color: transparent !important;             /* 1px line under background tabs */
+  --chrome-nav-bar-controls-border-color: transparent !important;    /* border around url bar */
+}
+
+/* FAVICONS */
+.tabbrowser-tab:not([pinned]) .tab-icon-image
+{
+  filter: grayscale(100%) opacity(90%) !important;
+  /*display: none !important;*/
+}
+
+/*Remove border between tabs
+Delete this rule if you want separators between background tabs*/
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+  border-left: none !important;
+}
+
+/* Border between background tabs */
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+  color: #111 !important; 
+  opacity: 0% !important; 
+}
+
+
+
+/* tab line - adjust color & size, default #0a84ff 2px */
+.tab-line {
+  display: none;
+}
+/* Make Toolbar Buttons Grayscale */
+.toolbarbutton-1 {
+  filter: grayscale(100%) brightness(1000%) invert(70%) !important;
+}
+/* New tab button color */
+#new-tab-button, .tabs-newtab-button {
+  list-style-image: url("newtab.png") !important;
+  -moz-image-region: auto !important;
+}
+
+
+
+/* #################
+- TOP TABS LOCATION
+################# */
+
+/* Move Tab-bar beside Nav-bar */
+#TabsToolbar {      
+  margin-bottom: 0px !important;                /* not needed anymore? */
+  margin-top: 0px !important;                   /*  */
+  margin-left: 35vw !important;
+  margin-right: -34px !important;
+  max-height: 32px !important;
+}
+
+#nav-bar {      
+  margin-bottom: -1px !important;               /* remove navbar bottom 1px border */
+  margin-top: -32px !important;
+  margin-right: 65vw !important; 
+  border: none !important;
+}   
+
+/* Remove padding above tabbar in compact mode */
+#main-window[sizemode="normal"] > #titlebar {
+  -moz-appearance: initial !important;
+}
+
+/* Back & Forward buttons */  
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
+  transform: scale(0.9, 0.9) !important;
+  margin-left: -2px !important;
+  margin-right: -2px !important; 
+}
+
+/* Move hamburger menu to the left */
+#PanelUI-button,
+#customization-panel-container,
+#customization-panelWrapper .panel-arrow { 
+  -moz-box-ordinal-group: 0 !important;
+  margin-right: -6px !important;
+}
+
+#appMenu-popup {
+  margin-right: -258px !important;
+}
+
+#appMenu-popup .panel-arrow {
+  margin-right: 248px !important;
+}
+
+/* More tools... button */
+#nav-bar-overflow-button { 
+  transform: scale(0.9, 0.9) !important;
+  fill: var(--color-overflow) !important;
+}  
+
+/* Tabs */
+.tabbrowser-tab {
+  height: 32px !important; 
+}
+.tab-content[pinned] {
+  padding: 0 30px !important;
+}
+
+/* Remove empty space before first tab
+Delete this rule if you need a space to drag the window*/
+#TabsToolbar .titlebar-placeholder[type="pre-tabs"]{
+    display: none !important;
+}
+
+
+
+/* #################
+- - HIDE STUFF
+################# */
+/* Menu */
+#appMenu-fxa-container,
+#appMenu-fxa-container+toolbarseparator,
+/* #appMenuRestoreLastSession, */
+#appMenu-zoom-controls,
+#appMenu-zoom-controls+toolbarseparator,
+#appMenu-edit-controls,
+#appMenu-edit-controls+toolbarseparator,
+#appMenu-library-button,
+#appMenu-customize-button,
+#appMenu-customize-button+toolbarseparator,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button,
+#appMenu-more-button,
+
+#identity-box {
+    background: var(--url-bg) !important; 
+    color: var(--secondary-text) !important;
+    opacity: 0 !important;
+}
+#identity-box:hover {
+    opacity: 1 !important;    
+}
+#dropmarker-icon,
+#historydropmarker,
+#autocomplete-history-dropmarker,
+#urlbar-history-dropmarker,
+#dropmarker,
+#autocomplete-history-dropmarker,
+#urlbar-history-dropmarker,
+#urlbar-reload-button,
+#urlbar-zoom-button,
+#plugins-notification-icon,
+#notification-anchor-icon,
+#notification-popup-box,
+.scrollbutton-up,
+.scrollbutton-down,
+#alltabs-button,
+.autocomplete-history-dropmarker.urlbar-history-dropmarker,
+.toolbarbutton-menubutton-dropmarker,
+#memfx-toolbar-button, 
+#reload-button, 
+.box-inherit.toolbarbutton-menubutton-button, 
+.scrollbutton-up,
+.scrollbutton-down, 
+
+/* URL Bar */
+#pageActionButton,
+#pocket-button-box,
+#ar-button,
+.autocomplete-history-dropmarker,
+#identity-icon-labels
+{
+    display: none !important;
+}
+#page-action-buttons { 
+  /*** ICONS AND BUTTONS ***/
+  display: none !important;
+}
+#dropmarker-icon,
+
+
+
+/* #################
+- - - URL BAR
+################# */
+
+#urlbar {
+  /* No full url */
+  /* -moz-binding: url("bindings.xml#urlbar") !important; */
+  /* Style */
+  background: rgb(235, 235, 235) !important;
+  /*background: rgb(228, 5, 5) !important;*/
+  border: none !important;
+  box-shadow: none !important;
+  /*max-width: 474px !important;*/
+}
+/* Center */
+#urlbar .urlbar-input-box {
+  text-align: center;
+  -webkit-text-fill-color: rgb(87, 87, 87);
+  margin-bottom: 1px;
+  /*margin-left: -53px !important;*/
+  box-shadow: none !important;
+  padding-right: 44px;
+}
+
+
+/* #################
+- - - - TABS
+################# */
+
+#TabsToolbar .close-icon {
+  filter: opacity(30%) !important;
+}
+/* Unhide the tab close button on hover
+#TabsToolbar .close-icon {
+  display: none !important;
+}
+#TabsToolbar .tabbrowser-tab:hover .close-icon {
+  visibility: visible !important;
+}
+*/
+
+/* center text */
+.tab-text {
+  text-align: center !important;
+}
+.tab-label {
+  -moz-box-flex: 1 !important; 
+  text-align: center !important;
+}
+
+
+
+
+
+
+/* 
+  Firefox 57 users: https://www.jeffersonscher.com/gm/url-bar-tweaks.html
+  You can copy/paste into a userChrome.css file, see https://www.userchrome.org/
+  Firefox 52-56 users: roll back your Stylish to version 2.1.1 or 2.0.7 here:
+  https://addons.mozilla.org/firefox/addon/stylish/versions/
+  Then find Stylish on the Add-ons page, click its More link, and turn off updates
+*/
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Remove " - Visit" or " - Search with" bar in the drop-down */
+  #PopupAutoCompleteRichResult richlistitem:first-of-type[type*="heuristic"],
+  #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="searchengine"],
+  #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"],
+  #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="keyword"] {
+    display:none !important;
+  }
+  /* Hide line for searching sld.tld below "Visit" Line */
+  #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"] +
+  richlistitem[actiontype="searchengine"] {
+    display:none !important;
+  }
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Display drop-marker only when URL bar is hovered (Firefox default) */
+  /* Set max-height for items visible without scrolling */
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+    /* height:auto doesn't work in photon */
+    max-height: calc(45.5px * 10) !important;
+  }
+  /* Set drop-down width */
+  #PopupAutoCompleteRichResult {
+    width: 500px !important;
+    max-width: 500px !important;
+    margin-left: 0 !important;
+  }
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title-text, 
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-url-text {
+    min-width: 610px !important;
+  }
+  /* Create sufficient height for two lines */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) {
+    position: relative !important;
+    height: 45.5px !important;
+  }
+  /* Subtle border between results */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem {
+    border-bottom-color: #eee !important;
+  }
+  /* Position page title, set font-size */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-title {
+    position: absolute !important;
+    left: 54px;
+    top: 1px;
+    font-size: 14px !important;
+  }
+  /* Position page url / action, set font-size */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-url,
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-action {
+    position: absolute !important;
+    left: 54px;
+    top: 20px;
+    font-size: 12px !important;
+  }
+
+  /* Position bookmark tags */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-tags {
+    position: absolute !important;
+    right: 0px;
+    top: 3px;
+  }
+  /* Hide separator between title and URL */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem:not([actiontype="searchengine"]) .ac-separator {
+    display: none !important;
+  }
+  /* Position special icon (bookmark, switch-to-tab) */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-type-icon {
+    margin-left: 4px !important;
+ }
+  /* Prevent excess indenting of icons in Photon */
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem [anonid="type-icon-spacer"] {
+    display: none !important;
+  }
+  #PopupAutoCompleteRichResult {
+     --item-padding-start: 0 !important;
+  }
+
+  .autocomplete-richlistitem[selected=true] {
+    background-color: Highlight !important;
+  }
+  .autocomplete-richlistitem[selected=true] .ac-title, 
+  .ac-title[selected],
+  .autocomplete-richlistitem[selected=true] .ac-url, 
+  .ac-url[selected],
+  .autocomplete-richlistitem[selected=true] .ac-action,
+  .ac-action[selected],
+  .autocomplete-richlistitem[selected=true] .ac-separator,
+  .ac-separator[selected] {
+    color: HighlightText !important;
+  }
+  /* Use default text matching style */
+  /* Ability to scroll in Fx57 */
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
+    overflow-y: auto !important; 
+    padding-right: 3px !important;
+  }
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+    padding-right: 0 !important;
+  }
+}
+
