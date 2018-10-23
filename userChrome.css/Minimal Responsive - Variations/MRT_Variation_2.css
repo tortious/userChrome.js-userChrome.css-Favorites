@@ -1,0 +1,298 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+ 
+ 
+/* Contextual toolbar buttons, only show on hover, this is what matters, the rest of the file are just style tweaks I like
+ */
+ 
+ 
+#nav-bar toolbarbutton
+ {
+    margin-left: -28px !important;
+    opacity: 0 !important;
+    transform: scale(.85, .85) !important;
+    pointer-events: none !important;
+    transition: margin-left 100ms var(--animation-easing-function), opacity 100ms var(--animation-easing-function), transform 100ms var(--animation-easing-function) !important;
+ transition-delay: 0s;
+}
+ 
+:root:not([customizing]) :hover > #nav-bar toolbarbutton,
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
+:root:not([customizing]) :hover > #titlebar toolbarbutton{
+    transform: scale(1, 1) !important;
+opacity:1 !important;
+margin-left:0 !important;
+pointer-events: auto !important;
+ transition-delay: 3s;
+}
+ 
+/* random style tweaks I like */
+/*
+Remove borders everywhere, some code copied from edge style for firefox
+*/
+ 
+ :root {
+  --tabs-border: transparent !important;
+}
+ 
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+   border-left: none !important;
+}
+ 
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  box-shadow: none !important;
+}
+ 
+#nav-bar {
+    margin-top: 0px !important;
+    border-top: 0px !important;
+    box-shadow: none !important;
+}
+ 
+/* nav bar is semi opaque when unhovered */
+#nav-bar > * {
+opacity:0.5;
+transition: opacity 0.3s;
+}
+ 
+#nav-bar:hover > * {
+opacity:1 !important;
+}
+ 
+#urlbar {
+opacity:1 !important;
+}
+ 
+#urlbar .urlbar-input-box {
+opacity:1 !important;
+}
+ 
+ 
+#urlbar, .searchbar-textbox {
+    border: 0px !important;
+    height: 20px !important;
+}
+ 
+#urlbar {
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+}
+ 
+.tab-background {
+    border-top: none !important;
+}
+ 
+.tabs-newtab-button, #new-tab-button, #alltabs-button {
+    color: rgba(240, 240, 240, 1);
+    border-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+ 
+ 
+window:not([chromehidden~="toolbar"]) #urlbar-container > .toolbarbutton-1:-moz-any([disabled], :not([open]):not([disabled]):not(:active)) > .toolbarbutton-icon[class], #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon[class] {
+ 
+    box-shadow: none !important;
+    border: 0px !important;
+}
+ 
+ /*
+ * Description: Personnal toolbar in vertical position on the right
+ *              side of firefox's window.
+ * 
+ * Screenshot: https://imgur.com/Uhj96G7
+ *
+ * Contributor(s): erlotinib
+ */
+:root {
+  /* The space between the top of the window and
+   * the beginning of the toolbar may change 
+   * between OS/density/...
+   * This variable may need to be adjusted in 
+   * order to have the bar at the right place
+   */
+  --space-from-top-of-window: 80px;
+}
+
+/* ---------------- */
+/*
+ * Code from Faviconized Bookmarks from Okamoi
+ */
+
+#PersonalToolbar .bookmark-item > .toolbarbutton-text  {
+  display: none !important;
+}
+
+#PersonalToolbar .bookmark-item > .toolbarbutton-icon  {
+  margin-inline-end: 0px !important;
+}
+/* ---------------- */
+
+/* Create space in the window for the toolbar  */
+#browser, #browser-bottombox {
+  margin-left: 35px!important;
+}
+
+#PersonalToolbar, #personal-bookmarks {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+/* Hide the toolbar when in fullscreen mode */
+#main-window[inFullscreen="true"] #PersonalToolbar {
+  visibility: collapse !important;
+}
+
+#main-window[inFullscreen="true"] #browser,
+#main-window[inFullscreen="true"] #browser-bottombox {
+  margin-left: 0!important;
+}
+
+#PersonalToolbar {
+  position: fixed!important;
+  /*
+   * We place the toolbar below the url-bar and menu bar
+   * 0 is the top of firefox's interface 
+   */
+  top: var(--space-from-top-of-window)!important;
+  left:35px;
+  height: 35px!important;
+  width: 110%!important;
+  /* turns the personnalToolbar on its side to a vertical orientation */
+  transform-origin: top left!important;
+  transform: rotate(90deg)!important;
+}
+
+#personal-bookmarks {
+  height: 100%!important;
+  width: 100%!important;
+  /*
+   * To have the icons in the original order, 
+   * rotate the list of bookmarks 180°
+   */
+  transform: rotate(0deg)!important;
+  transform-origin: 50% 50%!important;
+}
+
+#personal-bookmarks .bookmark-item {
+  /*
+   * Icons are on their side due to the 90° rotation.
+   * Put them back with a rotation, 90° CCW 
+   */
+  transform: rotate(-90deg)!important;
+  /* 
+   * Modify width to change space between icon, the value cannot 
+   * be greater than the height of #PersonnalToolbar
+   */
+  width: 35px!important;
+  margin-top:0!important;
+
+}
+ 
+.titlebar-placeholder[type="post-tabs"] {
+    width: 50px !important;
+}
+ 
+#TabsToolbar {
+    margin-bottom: 0px !important;
+}
+#navigator-toolbox::after {
+    border-bottom: 0px !important;
+}
+ 
+ 
+#TabsToolbar .tab-background {
+    border-right: 0px !important;
+    border-left: 0px !important;
+}
+.scrollbutton-up, .scrollbutton-down {
+    margin-bottom: 0px !important;
+}
+.scrollbutton-up:hover, .scrollbutton-down:hover {
+    background: rgba(42, 42, 42, 1) ;
+}
+.scrollbutton-up:hover:active, .scrollbutton-down:hover:active {
+    background: #444;
+}
+.tabs-newtab-button .toolbarbutton-icon {
+    background: transparent ;
+}
+#urlbar, .searchbar-textbox {
+    box-shadow: none !important;
+}
+.close-icon > .toolbarbutton-icon {
+    border-radius: 0px !important;
+}
+#TabsToolbar[movingtab] {
+    padding-bottom: 0px !important;
+}
+#TabsToolbar[movingtab] > .tabbrowser-tabs {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+#new-tab-button > .toolbarbutton-icon, #alltabs-button > .toolbarbutton-icon {
+    background-color: transparent;
+}
+:root {
+    --toolbarbutton-border-radius: 0px !important;
+}
+ 
+ 
+ 
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+    padding: 0px !important;
+}
+ 
+#tabbrowser-tabs {
+    --tab-line-color: -moz-win-accentcolor !important;
+    --tab-loading-fill: -moz-win-accentcolor !important;
+box-shadow: none !important;
+}
+#tabbrowser-tabs:-moz-window-inactive {
+    --tab-line-color: rgb(128, 128, 128) !important;
+}
+ 
+.webextension-browser-action {
+filter: saturate(0%);
+}
+ 
+ 
+:root[lwtheme-image]:-moz-lwtheme-brighttext {
+    text-shadow: none !important;
+}
+ 
+ 
+/*
+ * Only show close buttons on background tabs when hovering with the mouse
+ *
+ * Contributor(s): Timvde
+ */
+ 
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+  display: none !important;
+}
+ 
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+}
+ 
+/*
+ * Underlines and dims unloaded tabs
+ *
+ * Contributor(s): josemam
+ */
+ 
+.tabbrowser-tab[pending] {
+ font-style: italic;
+}
+ 
+ 
+toolbarspring {
+    min-width: 8px;
+    max-width: 8px;
+}
+ 
+/* Change tab max width */
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: 300px !important;
+}
+
