@@ -2,7 +2,7 @@
 //Left + Single column only
 
 (function () {
-    if (location != "chrome://browser/content/browser.xul") {
+    if (location != "chrome://browser/content/browser.xhtml") {
         return;
     }
 
